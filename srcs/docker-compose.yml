@@ -1,4 +1,5 @@
 version: '3'
+
 volumes:
   wordpress:
     name: wordpress
@@ -36,8 +37,6 @@ services:
   wordpress:
     container_name: wordpress
     build: ./requirements/wordpress/
-      # ports:
-      #- "9000:9000"
     depends_on:
       - mariadb
     volumes:
@@ -57,5 +56,3 @@ services:
     networks:
       - inception
     restart: unless-stopped
-      #expose:
-      #- "3306"

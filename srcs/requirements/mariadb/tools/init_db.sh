@@ -9,7 +9,7 @@ do
 done
 
 if [ ! -d /var/lib/mysql/${SQL_DB} ]; then
-	sh /create.sh
+	sh /create_db.sh
 else
 	mariadb-admin -u root -p${SQL_ROOT_PWD} -hlocalhost shutdown
 fi

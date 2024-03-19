@@ -12,7 +12,7 @@ RUN	chmod +x wp-cli.phar
 RUN	mv wp-cli.phar /usr/local/bin/wp
 
 COPY	conf/www.conf /etc/php/7.4/fpm/pool.d
-COPY	tools/auto_config.sh /auto_config.sh
-RUN	chmod +x auto_config.sh
+COPY	tools/config_wp.sh /config_wp.sh
+RUN	chmod +x config_wp.sh
 
-CMD	["/auto_config.sh"]
+CMD	["/config_wp.sh"]
